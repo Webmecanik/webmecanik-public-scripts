@@ -1,6 +1,6 @@
 # Envoyer des données d'un formulaire html vers Automation
 
-A diposition, vous trouverez un exemple dans le fichier ``index.php``.
+A diposition, vous trouverez un exemple dans le fichier ``index.html``.
 
 ## Comment je l'intègre ? 
 * Intégrer le script js **atmt_form_mapper.js** dans votre page : ``<script src="js/atmt_form_mapper.js"></script>``
