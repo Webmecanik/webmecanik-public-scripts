@@ -79,7 +79,7 @@ function retrieveForm(form, mappingFields) {
 	return arrayForAtmt;
 }
 
-function atmt(form, mappingFields_form, atmtUrl) {
+function form_mapper(form, mappingFields_form, atmtUrl) {
 
 	var arrayForAtmt = retrieveForm(form, mappingFields_form);
 

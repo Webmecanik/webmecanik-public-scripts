@@ -3,10 +3,10 @@
 A diposition, vous trouverez un exemple dans le fichier ``index.html``.
 
 ## Comment je l'intègre ? 
-* Intégrer le script js **atmt_form_mapper.js** dans votre page : ``<script src="js/atmt_form_mapper.js"></script>``
+* Intégrer le script js **atmt_form_mapper.js** dans votre page : ``<script src="js/mautic_form_mapper.js"></script>``
 * Ajouter la variable js qui va contenir l'url de votre instance Automation : ``var urlAutomation = "https://test0719-1.automation.webmecanik.com";``
 * Ajouter ensuite le tableau qui va contenir la correspondance des champs de votre formulaire avec les alias des champs de votre instance Automation : ``var mappingFields_form1 = {"civilite" : "title", "prenom" : "lastname"};``
-* Et enfin ajouter l'attribut **onSubmit** à la balise de votre formulaire qui appelle la fonction **atmt()**. Elle prend en parametres dans l'ordre : le formulaire, le tableau de mapping, et le nom de l'instance Automation :``<form id="formulaire_test" onSubmit="return atmt(this, mappingFields_form1, urlAutomation);">``
+* Et enfin ajouter l'attribut **onSubmit** à la balise de votre formulaire qui appelle la fonction **atmt()**. Elle prend en parametres dans l'ordre : le formulaire, le tableau de mapping, et le nom de l'instance Automation :``<form id="formulaire_test" onSubmit="return form_mapper(this, mappingFields_form1, urlAutomation);">``
 
 
 ## Comment envoyer une nouvelle données dans l'instance Automation  ?
