@@ -13,6 +13,7 @@ A diposition, vous trouverez un exemple dans le fichier ``index.html``.
 * Ajouter le champ input dans votre formualire html : ``<input id="nom" name="nom" type="text" placeholder="Nom" required>``
 * Il faut mettre à jour le tableau de mapping. En clés, il faut mettre l'id de ce champ et en valeur, l'alias du champ dans Automation : ``var mappingFields_form1 = {"civilite" : "title", "prenom" : "lastname", "nom" : "firstname"};``
 * Il faut que le [champ personnalisé](http://fr.support.webmecanik.com/leads/manage_fields.html#nouveau-champ) existe dans Automation et qu'il puisse être **actualisé publiquement**.
+*Si vous utilisez des inputs de type "checkbox", il faut un champs personnalisé d'Automation par input de ce type. 
 
 ## Que faire en cas d'erreur ?
 
