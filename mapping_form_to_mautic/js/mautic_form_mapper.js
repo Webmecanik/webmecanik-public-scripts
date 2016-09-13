@@ -88,6 +88,9 @@ function form_mapper(form, mappingFields_form, atmtUrl) {
         m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
 	})(window, document, 'script', atmtUrl+'/mtc.js', 'mtformmapper');
 
+	var start = new Date().getTime();
+	while (new Date().getTime() - start < 2000) {}
+
 	mtformmapper('send', 'pageview', arrayForAtmt);
 
 	return true;
