@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
   <head>
-    <title></title>
+    <title>Titre de la page trackée</title>
     <meta charset="UTF-8">
     </head>
     <body>
 
-      <form id="formulaire_test" onSubmit="return form_mapper(this, mappingFields_form1, urlAutomation);">
-        <fieldset>
+      <form id="formulaire_test" action="javascript:;" onSubmit="form_mapper(this, mappingFields_form1, urlAutomation);">
+        <div>
           <legend>Votre identité</legend>
 
           <label for="civilite">Civilité</label>
@@ -24,9 +24,9 @@
           <br/>
           <label for="tel">Téléphone</label>
           <input id="tel" name="tel" type="text" placeholder="+33" required>
-        </fieldset>
+        </div>
 
-        <fieldset>
+        <div>
           <legend>Informations</legend>
 
           <label for="date">Date de naissance</label>
@@ -54,14 +54,14 @@
             <option value="opel">Opel</option>
             <option value="audi">Audi</option>
           </select>
-        </fieldset>
+        </div>
         <br/>
         <button type="submit">OK</button>
       </form>
 
       <footer>
         <script type="text/javascript">
-          var urlAutomation = "https://test0719-1.automation.webmecanik.com";
+          var urlAutomation = "https://demo.automation.webmecanik.com";
           var mappingFields_form1 = {
             // "id input" : "alias atmt",
             "civilite" : "title",
