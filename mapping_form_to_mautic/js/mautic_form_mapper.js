@@ -1,3 +1,8 @@
+(function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+    w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+        m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+})(window, document, 'script', urlAutomation+'/mtc.js', 'mt');
+
 function in_array_value(string, array) {
     var result = false;
     for(var i=0; i<array.length; i++){
@@ -82,20 +87,22 @@ function retrieveForm(form, mappingFields) {
     return arrayForAtmt;
 }
 
-function form_mapper(form, mappingFields_form, atmtUrl) {
+var formulaire = document.getElementById(mappedFormId);
+formulaire.onsubmit = function(event) {
 
-    var arrayForAtmt = retrieveForm(form, mappingFields_form);
-
-    (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
-        w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
-            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
-    })(window, document, 'script', atmtUrl+'/mtc.js', 'mt');
-
+    var arrayForAtmt = retrieveForm(formulaire, mappingFields_form);
 
     var start = new Date().getTime();
     while (new Date().getTime() - start < 2000) {}
 
-    mt('send', 'pageview', arrayForAtmt);
+    mt('send', 'pageview', arrayForAtmt, {
+        onload: function() {
+            formulaire.submit();
+        },
+        onerror: function() {
+            return false;
+        }
+    });
 
-    return true;
-}
+    return false;
+};

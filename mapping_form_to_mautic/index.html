@@ -6,7 +6,7 @@
     </head>
     <body>
 
-      <form id="formulaire_test" action="javascript:;" onSubmit="form_mapper(this, mappingFields_form1, urlAutomation);">
+      <form id="formulaire_test" action="javascript:;">
         <div>
           <legend>Votre identité</legend>
 
@@ -62,6 +62,7 @@
       <footer>
         <script type="text/javascript">
           var urlAutomation = "https://test0719-1.automation.webmecanik.com";
+          var mappedFormId = "formulaire_test";
           var mappingFields_form1 = {
             // "id input" : "alias atmt",
             "civilite" : "title",
@@ -79,7 +80,6 @@
           };   
         </script>
         <script src="js/mautic_form_mapper.js"></script>
-
       </footer>    
     </body>
 </html>
