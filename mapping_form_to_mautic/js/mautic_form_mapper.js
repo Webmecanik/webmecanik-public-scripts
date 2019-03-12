@@ -29,7 +29,7 @@ function retrieveForm(form, mappingFields) {
     var valuePositive = "yes";
     var valueNegative = "no";
 
-    var possiblesInputs = new Array("text", "email", "radio", "textarea", "number", "url", "tel", "date", "datetime", "time", "range", "color", "checkbox", "select-one", "select-multiple", "submit");
+    var possiblesInputs = new Array("text", "email", "radio", "textarea", "number", "url", "tel", "date", "datetime", "time", "range", "color", "checkbox", "select-one", "select-multiple", "submit", "hidden");
 
     var arrayForAtmt = {};
 
