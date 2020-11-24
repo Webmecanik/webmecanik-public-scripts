@@ -25,6 +25,6 @@ select.removeChild(elem);
 3. Copy the ID of the field value you want to hide (in the example is was `702686779`)
 4. Change the collected variables into the example script
 
-![](img.png)
+![screenshot](img.png)
 
 Here we go :rocket: !
