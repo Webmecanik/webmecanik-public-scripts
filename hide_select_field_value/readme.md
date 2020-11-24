@@ -19,10 +19,12 @@ select.removeChild(elem);
 </script>
 ```
 
-To replace the 2 example variables (`mauticform_input_gotowebinar_webinars_a_venir` and `702686779`) with your own variables, you need to:
+**To replace the 2 example variables** (`mauticform_input_gotowebinar_webinars_a_venir` and `702686779`) with your own variables, you need to:
 1. Inspect your form code once inserted into you page
 2. Copy the ID of the select field (in the example it was `mauticform_input_gotowebinar_webinars_a_venir`)
 3. Copy the ID of the field value you want to hide (in the example is was `702686779`)
 4. Change the collected variables into the example script
+
+[](img.png)
 
 Here we go :rocket: !
