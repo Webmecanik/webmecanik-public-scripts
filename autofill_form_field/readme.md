@@ -14,17 +14,19 @@ Add the following script on your landing page.
 
 ```javascript
 <script>
-function getParam(name) { name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]"); var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search); return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " ")); }
-Webflow.push(function() {
+function autoFillForm(searchParamsString) {
+  var searchParams = new URLSearchParams(searchParamsString);
+  for (var [key, value] of searchParams.entries()) {
+    var inputs = document.getElementsByName(key);
+    if (inputs.length > 0) {
+      var input = inputs[0];
+      input.value = value;
+    }
+  }
+}
 
-  // Auto-populate form fields (text fields only) based on query string
-  $('input:text, input[type=email]').each(function() {
-    var paramValue = getParam(this.id);
-    if(this.value == "" && paramValue != "") this.value = paramValue;
-  });
-
-});
+autoFillForm(document.location.search);
 </script>
 ```
 
-In your form, use as field ID the name of your parameter. In my example you have `firstname` and `email`.
+In your form, use as field name, the name of your parameter. In my example you have `firstname` and `email`.
