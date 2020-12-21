@@ -25,7 +25,10 @@ function autoFillForm(searchParamsString) {
   }
 }
 
-autoFillForm(document.location.search);
+document.addEventListener("DOMContentLoaded", function() {
+  autoFillForm(document.location.search);
+});
+
 </script>
 ```
 
