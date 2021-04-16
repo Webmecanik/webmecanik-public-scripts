@@ -20,7 +20,7 @@ That's simply all.
 ```javascript
 <script>
 function autoFillForm() {
-    var inputs = document.getElementsByName('mauticform[custom_date]');
+    var inputs = document.getElementsByName('date'); // Change the field name here
     if (inputs.length > 0) {
       var input = inputs[0];
       const today =  new Date();
