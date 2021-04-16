@@ -19,19 +19,19 @@ That's simply all.
 
 ```javascript
 <script>
-function autoFillForm(searchParamsString) {
-  var searchParams = new URLSearchParams(searchParamsString);
-  for (var [key, value] of searchParams.entries()) {
-    var inputs = document.getElementsByName(key);
+function autoFillForm() {
+    var inputs = document.getElementsByName('mauticform[custom_date]');
     if (inputs.length > 0) {
       var input = inputs[0];
-      input.value = value;
+      const today =  new Date();
+      const dateISO = today.toISOString();
+      const dateFormat = dateISO.slice(0, 10);
+      input.value = dateFormat;
     }
-  }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  autoFillForm(document.location.search);
+  autoFillForm();
 });
 
 </script>
