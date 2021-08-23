@@ -43,8 +43,11 @@ Sometimes you want to autofill a hidden form field with a value coming from URL 
 
 ### Create the hidden field in your form
 With Webmecanik Automation:
-1. Add a hidden type field in your form. Name it "utm_source", this will be invisible for end user: <img width="300" alt="Add hidden form field" src="https://user-images.githubusercontent.com/14075239/130429400-f25a845d-d8f1-4daf-ada1-33d540fa102e.png">
-2. Map to your contact or company custom field where you want to store the Lead source value: <img width="280" alt="Form field mapping" src="https://user-images.githubusercontent.com/14075239/130427299-bf5451f4-27f7-4b66-81b6-d6a0912a1580.png">
+
+1. Add a hidden type field in your form. Name it "utm_source", this will be invisible for end user:
+<img width="300" alt="Add hidden form field" src="https://user-images.githubusercontent.com/14075239/130429400-f25a845d-d8f1-4daf-ada1-33d540fa102e.png">
+2. Map to your contact or company custom field where you want to store the Lead source value:
+<img width="280" alt="Form field mapping" src="https://user-images.githubusercontent.com/14075239/130427299-bf5451f4-27f7-4b66-81b6-d6a0912a1580.png">
 3. And enable the feature "If exist, not overwrite" to avoid erasing the existing data if you want (in case you only want to save the First touch attribution).
 
 ### Grab the parameters and autofill the form
