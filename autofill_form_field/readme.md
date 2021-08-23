@@ -1,3 +1,7 @@
+# Examples
+1. [Autofill a form field with URL parameter](#autofill-a-form-field-with-url-parameter)
+2. Parse UTM to save in hidden formfield
+
 # Autofill a form field with URL parameter
 Sometimes you want to autofill a form field with a value. If you're able to add this value in the URL as parameter like `https://mydomain.com?myfield=myvalue` then you can quite easily grab this value and add it into the form field you want.
 
