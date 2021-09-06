@@ -111,7 +111,6 @@ function getCookie(cname) {
 
 document.addEventListener("DOMContentLoaded", function() {
    var utmSourceValue = getCookie("utm_source");
-   console.log(utmSourceValue)
    var inputs = document.getElementsByName('mauticform[utm_source]');
     if (inputs.length > 0) {
       var input = inputs[0];
