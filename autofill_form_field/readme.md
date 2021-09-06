@@ -91,19 +91,31 @@ Add the following script on your webpage. It can be done by your Webmaster, or b
 
 ```javascript
 <script>
-function autoFillForm(searchParamsString) {
-  var searchParams = new URLSearchParams(searchParamsString);
-  for (var [key, value] of searchParams.entries()) {
-    var inputs = document.getElementsByName('mauticform['+key+']');
-    if (inputs.length > 0) {
-      var input = inputs[0];
-      input.value = value;
+
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
     }
   }
+  return "";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  autoFillForm(document.location.search);
+   var utmSourceValue = getCookie("utm_source");
+   var inputs = document.getElementsByName('mauticform[utm_source]');
+    if (inputs.length > 0) {
+      var input = inputs[0];
+      input.value = utmSourceValue;
+    }
 });
 
 </script>
