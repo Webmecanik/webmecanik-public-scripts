@@ -87,6 +87,8 @@ With Webmecanik Automation:
 3. And enable the feature "If exist, not overwrite" to avoid erasing the existing data if you want (in case you only want to save the First touch attribution).
 
 ### Grab the cookie value and autofill the form
+**⚠️ You first need to ask your webmaster to add a feature on your website in the view to store UTM values in cookies ⚠️**
+
 Add the following script on your webpage. It can be done by your Webmaster, or by adding a HTML field in the same form with the following script. This will insert the script on the page where the form is insterted.
 
 ```javascript
