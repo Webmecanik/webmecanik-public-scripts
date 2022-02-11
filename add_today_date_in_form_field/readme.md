@@ -7,7 +7,7 @@ With Webmecanik Automation create a form that can grab this date
 2. Create a form with a date type field
 3. Map this form field to your previously created custom field
 
-## Add the custom scrip
+## Add the custom script
 1. Insert your form on your webpage (you can use Webmecanik Automation landing pages)
 2. Inspect form and copy the date type field `name` attribute
 3. Grab the script hereunder and modify "name" by the value you just copied
