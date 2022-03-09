@@ -30,4 +30,4 @@ Si le nouveau lead n'apparait pas dans Automation, c'est peut être que :
 ### Il me manque des données :
 * Si le champ n'existe pas dans Automation, la valeur correspondante ne sera pas ajoutée au contact (les autres champs sont pris en compte).
 * Vérifiez que le tableau de correspondance est correct. 
-* Vérifiez que tous vos champs personalisés soient actualisables publiquement.
+* Vérifiez que tous vos champs personnalisés soient actualisables publiquement.
