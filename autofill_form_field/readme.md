@@ -19,21 +19,36 @@ Add the following script on your landing page.
 
 ```javascript
 <script>
+function findInputByValue(inputs, value) {
+  var res;
+  inputs.forEach((input) => {
+    console.log(input.value);
+    if (input.value == value) {
+      res = input;
+    }
+  });
+  return res;
+}
+
 function autoFillForm(searchParamsString) {
   var searchParams = new URLSearchParams(searchParamsString);
   for (var [key, value] of searchParams.entries()) {
-    var inputs = document.getElementsByName('mauticform['+key+']');
-    if (inputs.length > 0) {
+    var inputs = document.getElementsByName(key);
+    if (inputs.length === 0) {
+    } else if (inputs.length === 1) {
       var input = inputs[0];
       input.value = value;
+    } else {
+      var elemToCheck = findInputByValue(inputs, value);
+      if (elemToCheck) {
+        elemToCheck.checked = true;
+      }
     }
   }
 }
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   autoFillForm(document.location.search);
 });
-
 </script>
 ```
 
