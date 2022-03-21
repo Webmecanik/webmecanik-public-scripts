@@ -22,7 +22,6 @@ Add the following script on your landing page.
 function findInputByValue(inputs, value) {
   var res;
   inputs.forEach((input) => {
-    console.log(input.value);
     if (input.value == value) {
       res = input;
     }
@@ -30,10 +29,19 @@ function findInputByValue(inputs, value) {
   return res;
 }
 
+function findElementsByName(baseName) {
+  var inputs = document.getElementsByName(baseName);
+  if(inputs.length === 0) {
+    var newBaseName = baseName.slice(0, -2) + ']'
+    return document.getElementsByName(newBaseName);
+  }
+  return inputs;
+}
+
 function autoFillForm(searchParamsString) {
   var searchParams = new URLSearchParams(searchParamsString);
   for (var [key, value] of searchParams.entries()) {
-    var inputs = document.getElementsByName(key);
+    var inputs = findElementsByName(key)
     if (inputs.length === 0) {
     } else if (inputs.length === 1) {
       var input = inputs[0];
