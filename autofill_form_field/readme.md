@@ -2,7 +2,7 @@
 1. [Autofill a form field with URL parameter](#autofill-a-form-field-with-url-parameter)
 2. [Parse UTM to save value in hidden formfield](#parse-utm-to-save-value-in-hidden-formfield)
 3. [Parse cookie to save its value in hidden formfield](#parse-cookie-to-save-its-value-in-hidden-formfield)
-4. [Add full current URL in form field]()
+4. [Add full current URL in form field](#add-full-current-url-in-form-field)
 
 ## Autofill a form field with URL parameter
 Sometimes you want to autofill a form field with a value. If you're able to add this value in the URL as parameter like `https://mydomain.com?myfield=myvalue` then you can quite easily grab this value and add it into the form field you want.
@@ -148,7 +148,8 @@ document.addEventListener("DOMContentLoaded", function() {
 ```
 ## Add full current URL in form field
 1. Create your form
-2. Add a hidden field names `page-url` in our example. You can map this field to your contact field if you want to save the value on the contact profile. <img width="579" alt="Capture d’écran 2024-07-22 à 15 55 27" src="https://github.com/user-attachments/assets/907fc429-9fe9-4130-9ea0-b9065dfd644d">
+2. Add a hidden field names `page-url` in our example. You can map this field to your contact field if you want to save the value on the contact profile.
+<img width="579" alt="Capture d’écran 2024-07-22 à 15 55 27" src="https://github.com/user-attachments/assets/907fc429-9fe9-4130-9ea0-b9065dfd644d">
 3. Add a HTML field including the following script
 ```javascript
 <script>
