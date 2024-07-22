@@ -151,6 +151,7 @@ document.addEventListener("DOMContentLoaded", function() {
 2. Add a hidden field names `page-url` in our example. You can map this field to your contact field if you want to save the value on the contact profile.
 <img width="579" alt="Capture d’écran 2024-07-22 à 15 55 27" src="https://github.com/user-attachments/assets/907fc429-9fe9-4130-9ea0-b9065dfd644d">
 3. Add a HTML field including the following script
+
 ```javascript
 <script>
 document.addEventListener('DOMContentLoaded', function() {
